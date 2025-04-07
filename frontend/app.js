@@ -12,7 +12,7 @@ function captureFace() {
   const imageData = canvas.toDataURL("image/jpeg");
   const phone = document.getElementById("phone").value;
 
-  fetch("https://<YOUR-FUNCTION-APP>.azurewebsites.net/attendance", {
+  fetch("https://<attendance-function-app>.azurewebsites.net/attendance", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ phoneNumber: phone, faceImage: imageData })
